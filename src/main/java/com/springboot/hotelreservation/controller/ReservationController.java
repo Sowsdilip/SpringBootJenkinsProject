@@ -6,8 +6,6 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-//import org.slf4j.log;
-//import org.slf4j.logFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,14 +21,12 @@ import com.springboot.hotelreservation.model.Reservation;
 import com.springboot.hotelreservation.model.Room;
 import com.springboot.hotelreservation.service.ReservationService;
 
-import lombok.extern.java.Log;
 
 
 
 
 @RestController
 @RequestMapping("/api")
-@Log
 public class ReservationController {
 	
 	//log log = logFactory.getlog(ReservationController.class);
@@ -41,9 +37,9 @@ public class ReservationController {
 	
 	@GetMapping("/welcome")
 	public String welcome() {
-	  log.info("wel-come endpoint is called");
+	  System.out.println("wel-come endpoint is called");
 	  String response ="welcome to hotel reservation";
-	  log.info("Response sent...."+response);
+	  System.out.println("Response sent...."+response);
 	  return response;
 	}
 
@@ -59,9 +55,9 @@ public class ReservationController {
 	
 	@GetMapping("guests")
 	public List<Guest> showGuests() {
-	 log.info("Request recieved to show guests....");
+	 System.out.println("Request recieved to show guests....");
 	 guest = reservationService.findGuests();
-	 log.info("Response for show guests end point...."+guest);
+	 System.out.println("Response for show guests end point...."+guest);
 	 return guest;
 	}
 	

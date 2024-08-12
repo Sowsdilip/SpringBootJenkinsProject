@@ -20,7 +20,6 @@ import lombok.extern.java.Log;
 
 @Service
 @Transactional
-@Log
 public class ReservationService {
 
 	@Autowired
@@ -40,13 +39,13 @@ public class ReservationService {
 
 	public List<Guest> findGuests() {
 		// TODO Auto-generated method stub
-		log.info("in findGuests method of service class");
+		System.out.println("in findGuests method of service class");
 		return guestRepository.findAll();
 	}
 
 	public void addRoom(Room room) {
 		// TODO Auto-generated method stub
-		log.info("in addRoom method of service class");
+		System.out.println("in addRoom method of service class");
 		roomRepository.save(room);
 	}
 
