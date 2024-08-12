@@ -39,7 +39,7 @@ public class ReservationController {
 	private ReservationService reservationService;
 	List<Guest> guest = new ArrayList<Guest>();
 	
-	@GetMapping("wel-come")
+	@GetMapping("/welcome")
 	public String welcome() {
 	  log.info("wel-come endpoint is called");
 	  String response ="welcome to hotel reservation";
