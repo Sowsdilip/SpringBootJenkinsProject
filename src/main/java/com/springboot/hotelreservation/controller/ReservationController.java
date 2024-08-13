@@ -33,8 +33,14 @@ public class ReservationController {
 	
 	@Autowired
 	private ReservationService reservationService;
+	
 	List<Guest> guest = new ArrayList<Guest>();
 	
+	
+	
+	public ReservationController() {
+	}
+
 	@GetMapping("/welcome")
 	public String welcome() {
 	  System.out.println("wel-come endpoint is called");

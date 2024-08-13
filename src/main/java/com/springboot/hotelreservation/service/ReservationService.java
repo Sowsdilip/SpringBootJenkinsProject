@@ -2,7 +2,6 @@ package com.springboot.hotelreservation.service;
 
 import java.util.List;
 import java.util.Optional;
-//import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +15,6 @@ import com.springboot.hotelreservation.model.Guest;
 import com.springboot.hotelreservation.model.Reservation;
 import com.springboot.hotelreservation.model.Room;
 
-import lombok.extern.java.Log;
 
 @Service
 @Transactional
@@ -30,6 +28,11 @@ public class ReservationService {
 
 	@Autowired
 	private ReservationRepository reservationRepository;
+	
+	
+
+	public ReservationService() {
+	}
 
 	public Guest addGuest(Guest guest) {
 		// TODO Auto-generated method stub
